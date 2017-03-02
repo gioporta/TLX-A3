@@ -1,0 +1,339 @@
+author = "TLX";
+onLoadName = "Takistan Life Xtreme";
+onLoadMission = "tlx-gaming.enjin.com";
+joinUnassigned = 1;
+respawn = BASE;
+respawndelay = 4.8;
+disabledAI = true;
+disableChannels[]={0,1,2,3,4,6};
+enableDebugConsole = 1;
+respawnDialog = 0;
+
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 80;
+};
+
+wreckLimit = 3;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 320;
+corpseLimit = 90;
+corpseRemovalMinTime = 600;
+corpseRemovalMaxTime = 900;
+
+#include "Config_Spyglass.hpp"
+
+#include "dialog\MasterHandler.h"
+#include "Config_Master.hpp"
+#include "dialog\pickup.hpp"
+
+class RscTitles
+{
+	#include "dialog\ui.hpp"
+	#include "dialog\progress.hpp"
+	#include "dialog\hud_nameTags.h"
+	#include "dialog\statusBar.hpp"
+	class wasted {
+    idd = -1;
+    duration = 17;
+    class controls {
+        class ExampleControl {
+            idc = -1;
+            type = 0;
+            style = 2192;
+            x = 0.125;
+            y = 0.125;
+            h = 0.75;
+            w = 0.75;
+            font = "EtelkaNarrowMediumPro";
+            sizeEx = 0.05;
+            colorBackground[] = {1,1,1,0};
+            colorText[] = {1,1,1,1};
+            text = "\RLG_Client\textures\wasted.paa";
+            lineSpacing = 1;
+			};
+		};
+	};
+};
+
+class CfgFunctions
+{
+	#include "Functions.h"
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class SirenLong
+	{
+		name = "SirenLong";
+		sound[] = {"sounds\Siren_Long.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class cuff
+	{
+		name = "cuff";
+		sound[] = {"sounds\cuff.ogg", 1, 1};
+		titles[] = {};
+	};
+	class wasted
+	{
+    name = "wasted";
+    sound[] = {"sounds\wasted.ogg", 1.0, 1};
+    titles[] = {};
+	};
+	class building
+	{
+		name = "building";
+		sound[] = {"sounds\building.ogg", 1, 1};
+		titles[] = {};
+	};
+	class phone
+	{
+		name = "phone";
+		sound[] = {"sounds\phone.ogg", 1, 1};
+		titles[] = {};
+	};
+		class Repair
+	{
+		name = "Repair";
+		sound[] = {"sounds\repair.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class checkpointalarm
+	{
+		name = "checkpointalarm";
+		sound[] = {"sounds\checkpointalarm.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class Welcome
+	{
+		name = "welcome";
+		sound[] = {"sounds\welcome.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class tazersound
+	{
+		name = "Tazersound";
+		sound[] = {"sounds\tazer.ogg", 0.25, 1};
+		titles[] = {};
+	};
+
+	class flashbang
+	{
+		name = "flashbang";
+		sound[] = {"sounds\flashbang.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class tieup
+	{
+		name = "tieup";
+		sound[] = {"sounds\tieup.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class blindfold
+	{
+		name = "blindfold";
+		sound[] = {"sounds\blindfold.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class drink
+	{
+		name = "drink";
+		sound[] = {"sounds\drink.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class eat
+	{
+		name = "eat";
+		sound[] = {"sounds\eat.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class AirRaidSirenAlert
+	{
+		name = "AirRaidSirenAlert";
+		sound[] = {"sounds\AirRaidSirenAlert.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class pickaxe
+	{
+		name = "pickaxe";
+		sound[] = {"sounds\pickaxe.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class paint
+	{
+		name = "paint";
+		sound[] = {"sounds\paint.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class red
+	{
+		name = "red";
+		sound[] = {"sounds\red.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class ems_horn
+	{
+		name = "ems_horn";
+		sound[] = {"sounds\ems_horn.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class wail
+	{
+		name = "wail";
+		sound[] = {"sounds\wail.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class woopwoop
+	{
+		name = "woopwoop";
+		sound[] = {"sounds\woopwoop.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class bankjob
+	{
+		name = "bankjob";
+		sound[] = {"sounds\Rob_Alarm.ogg",1.0,1};
+		titles[] = {};
+	};
+
+	class yelp
+	{
+		name = "yelp";
+		sound[] = {"sounds\yelp.ogg",1.0,1};
+		titles[] = {};
+	};
+
+		class dixie
+	{
+		name = "dixie";
+		sound[] = {"sounds\dixie.ogg",1.0,1};
+		titles[] = {};
+	};
+};
+
+class CfgDebriefing
+{
+	class NotWhitelisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are not white-listed to use this slot";
+		description = "You are not allowed to use this slot because you do not have the appropriate permissions, try another slot.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class Blacklisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are blacklisted from cops";
+		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class SpyGlass
+	{
+		title = "The SpyGlass sees you";
+		subTitle = "You were detected by the SpyGlass";
+		description = "You were detected for cheating and have been reported to the server. Enjoy your day.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+};
+
+class CfgNotifications
+{
+	class MedicalRequestEmerg
+	{
+		title = "EMS Requested";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 5;
+		priority = 7;
+	};
+
+	class DeliveryAssigned
+	{
+		title = "Delivery Job Accepted";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 10;
+		priority = 7;
+	};
+
+	class DeliveryFailed
+	{
+		title = "Delivery Job Failed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+		description = "%1";
+		duration = 7;
+		priority = 7;
+	};
+
+	class DeliverySucceeded
+	{
+		title = "Delivery Job Completed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
+		description = "%1";
+		duration = 6;
+		priority = 6;
+	};
+
+	class TextMessage
+	{
+		title = "Received A Text Message";
+		iconPicture = "\eg_sndimg\icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class PoliceDispatch
+	{
+		title = "911 Dispatch Center";
+		iconPicture = "\eg_sndimg\icons\messagepolice.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class AdminDispatch
+	{
+		title = "Admin Dispatch Center";
+		iconPicture = "\eg_sndimg\icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class AdminMessage
+	{
+		title = "Admin Message";
+		iconPicture = "\eg_sndimg\icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+};
+#include "infiSTAR_AdminMenu.hpp"
