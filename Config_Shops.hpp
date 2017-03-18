@@ -21,10 +21,10 @@ class WeaponShops {
 			{ "CUP_5x_22_LR_17_HMR_M", "", 1000 }
         };
     };
-    class rebelsmg {
+    class inssmg {
         name = "Cobra's Jihadi SMG Shop";
         side = "civ";
-        license = "rebel";
+        license = "ins";
         level = -1;
         msg = "";
         items[] = {
@@ -32,10 +32,10 @@ class WeaponShops {
 			{ "CUP_64Rnd_9x19_Bizon_M", "", 1000 }
         };
     };
-   class rebelar {
+   class insar {
         name = "Jackie's Jihadi Shop";
         side = "civ";
-        license = "rebel";
+        license = "ins";
         level = -1;
         msg = "";
         items[] = {
@@ -43,10 +43,10 @@ class WeaponShops {
 			{ "CUP_30Rnd_545x39_AK_M", "", 1000 }
         };
     };
-	class rebellmg {
+	class inslmg {
         name = "Pete's Jihadi LMG Shop";
         side = "civ";
-        license = "rebel";
+        license = "ins";
         level = -1;
         msg = "";
         items[] = {
@@ -54,10 +54,10 @@ class WeaponShops {
         { "CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M", "", 1000 }
         };
     };
-	class rebelexp {
+	class insexp {
         name = "Alex's Jihadi Explosive Shop";
         side = "civ";
-        license = "rebel";
+        license = "ins";
         level = -1;
         msg = "";
         items[] = {
@@ -65,10 +65,10 @@ class WeaponShops {
 			{ "CUP_Igla_M", "IGLA Missile", 1000 }
         };
     };	
-	class rebeladv {
-        name = "Advanced Rebel Weapons";
+	class insadv {
+        name = "Advanced Ins Weapons";
         side = "civ";
-        license = "rebeladvanced";
+        license = "insadvanced";
         level = -1;
         msg = "";
         items[] = {
@@ -76,10 +76,10 @@ class WeaponShops {
 			{ "CUP_30Rnd_Sa58_M_TracerG", "", 1000 }
         };
     };
-	class rebeloptics {
+	class insoptics {
         name = "Mohammed's Jihadi Optics & Accessories Shop";
         side = "civ";
-        license = "rebel";
+        license = "ins";
         level = -1;
         msg = "";
         items[] = {

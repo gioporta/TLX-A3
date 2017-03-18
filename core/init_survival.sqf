@@ -5,7 +5,7 @@
     {
         private["_damage"];
         sleep 1;
-        while {((player distance (getMarkerPos "Radiated Zone") < 50) && (player getVariable["Revive",TRUE]))} do
+        while {((player distance (getMarkerPos "Radiated Zone") < 500) && (player getVariable["Revive",TRUE]))} do
         {
             if(uniform player == "U_C_Scientist") then
             {

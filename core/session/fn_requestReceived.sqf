@@ -50,14 +50,14 @@ life_gear = SEL(_this,8);
 switch(playerSide) do {
 	case west: {
 		CONST(life_coplevel, parseNumber(SEL(_this,7)));
-		CONST(life_medicLevel,0);
+		CONST(life_insLevel,0);
 		life_blacklisted = SEL(_this,9);
 	};
 
 	case civilian: {
 		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
-		CONST(life_medicLevel, 0);
+		CONST(life_insLevel, 0); // TODO Get this
 		life_houses = SEL(_this,9);
 		{
 			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
@@ -71,10 +71,10 @@ switch(playerSide) do {
 		[] spawn life_fnc_initHouses;
 	};
 
-	case independent: {
-		CONST(life_medicLevel, parseNumber(SEL(_this,7)));
+	/*case independent: {
+		CONST(life_insLevel, parseNumber(SEL(_this,7)));
 		CONST(life_coplevel,0);
-	};
+	};*/
 };
 
 if(count (SEL(_this,12)) > 0) then {

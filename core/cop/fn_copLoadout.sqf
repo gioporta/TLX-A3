@@ -12,14 +12,13 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
-player addUniform "CamoU_Black";
-player addVest "TacVest_black";
-player addBackpack "TRYK_B_Belt_BLK";
+player addUniform "CUP_U_B_USArmy_Base";
 
-player addWeapon "Taser_26";
-player addMagazine "26_cartridge";
-player addMagazine "26_cartridge";
-player addMagazine "26_cartridge";
+// TODO Taser
+//player addWeapon "Taser_26";
+//player addMagazine "26_cartridge";
+//player addMagazine "26_cartridge";
+//player addMagazine "26_cartridge";
 
 /* ITEMS */
 player addItem "ItemMap";
@@ -34,6 +33,6 @@ player assignItem "ItemGPS";
 [true,"panicbutton",1] call life_fnc_handleInv;
 
 [] call life_fnc_saveGear;
-if((FETCH_CONST(life_coplevel)) > 5) then {
-threatLevel = player addaction [("<t color=""#00ffff"">" + ("Threat Level Changer") +"</t>"),"core\cop\threatlevel\threatMenu.sqf"]; 
-};
+//if((FETCH_CONST(life_coplevel)) > 5) then {
+	//threatLevel = player addaction [("<t color=""#00ffff"">" + ("Threat Level Changer") +"</t>"),"core\cop\threatlevel\threatMenu.sqf"]; 
+//};

@@ -60,25 +60,6 @@ class Life_Settings {
 	delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
 
 	crimes[] = { 
-		{"STR_Crime_187V","10350","1"}, 
-		{"STR_Crime_187","10500","2"}, 
-		{"STR_Crime_901","20500","3"}, 
-		{"STR_Crime_215","3500","4"}, 
-		{"STR_Crime_213","10000","5"},
-		{"STR_Crime_211","10000","6"}, 
-		{"STR_Crime_207","5000","7"}, 
-		{"STR_Crime_207A","4000","8"}, 
-		{"STR_Crime_390","30","9"}, 
-		{"STR_Crime_487","1000","10"}, 
-		{"STR_Crime_488","500","11"}, 
-		{"STR_Crime_480","5000","12"}, 
-		{"STR_Crime_481","3500","13"}, 
-		{"STR_Crime_482","10000","14"}, 
-		{"STR_Crime_483","10000","15"}, 
-		{"STR_Crime_459","5000","16"}, 
-		{"STR_Crime_666","40","17"}, 
-		{"STR_Crime_667","30000","18"}, 
-		{"STR_Crime_668","1000","19"}, 
 		{"STR_Crime_1","350","20"}, 
 		{"STR_Crime_2","1500","21"}, 
 		{"STR_Crime_3","2500","22"}, 
@@ -322,11 +303,9 @@ class Licenses {
 	LICENSEMACRO(dive,"STR_License_Diving","dive",2000,false,"civ")
 	LICENSEMACRO(oil,"STR_License_Oil","oil",50000,false,"civ")
 	LICENSEMACRO(cAir,"STR_License_Pilot","cAir",15000,false,"cop")
-	LICENSEMACRO(coastguard,"STR_License_CG","cg",8000,false,"cop")
 	LICENSEMACRO(heroin,"STR_License_Heroin","heroin",45000,true,"civ")
 	LICENSEMACRO(marijuana,"STR_License_Marijuana","marijuana",33500,true,"civ")
 	LICENSEMACRO(medmarijuana,"STR_License_Medmarijuana","medmarijuana",15000,false,"civ")
-	LICENSEMACRO(rebel,"STR_License_Rebel","rebel",125000,true,"civ")
 	LICENSEMACRO(trucking,"STR_License_Truck","trucking",20000,false,"civ")
 	LICENSEMACRO(diamond,"STR_License_Diamond","diamond",37000,false,"civ")
 	LICENSEMACRO(salt,"STR_License_Salt","salt",12000,false,"civ")
@@ -345,30 +324,11 @@ class Licenses {
 	LICENSEMACRO(krokodil,"STR_License_Krokodil","krokodil",50000,false,"civ") 
 	LICENSEMACRO(meth_basic,"STR_License_Meth_Basic","meth_basic",10000,false,"civ")
 	LICENSEMACRO(meth_adv,"STR_License_Meth_Adv","meth_adv",45000,false,"civ")
-	LICENSEMACRO(tokill,"STR_License_ToKill","tokill",0,false,"civ")
-	LICENSEMACRO(pilotadv,"STR_License_PilotAdv","pilotadv",250000,false,"civ")
-	LICENSEMACRO(pilotpro,"STR_License_PilotPro","pilotpro",250000,false,"civ")
 	/////New Additions/////
-	LICENSEMACRO(rebeladvanced,"STR_License_ADVANCEDREBEL","rebeladvanced",130000,false,"civ")
 	LICENSEMACRO(uranium,"STR_License_Uranium","uranium",53000,false,"civ")
+	LICENSEMACRO(ins,"STR_License_Ins","ins",0,true,"civ")
 	//Gangs
-	LICENSEMACRO(alpha,"STR_License_ALPHA","alpha",0,false,"civ")
-	LICENSEMACRO(kingsman,"STR_License_KINGSMAN","kingsman",0,false,"civ")
-	LICENSEMACRO(loansharks,"STR_License_LOANSHARKS","loansharks",0,false,"civ")
-	LICENSEMACRO(aegis,"STR_License_Aegis","aegis",0,false,"civ")
-	LICENSEMACRO(wongfamily,"STR_License_WongFamily","wongfamily",0,false,"civ")
-	LICENSEMACRO(tff,"STR_License_TFF","tff",0,false,"civ")
-	LICENSEMACRO(khadim,"STR_License_KHADIM","khadim",0,false,"civ")
-	LICENSEMACRO(kush,"STR_License_KUSH","kush",0,false,"civ")
-	LICENSEMACRO(onefamily,"STR_License_OneFamily","onefamily",0,false,"civ")
-	LICENSEMACRO(pmb,"STR_License_PMB","pmb",0,false,"civ")
-	LICENSEMACRO(twc,"STR_License_TWC","twc",0,false,"civ")
-	LICENSEMACRO(forsaken,"STR_License_FORSAKEN","forsaken",0,false,"civ")
-	LICENSEMACRO(freedom,"STR_License_FREEDOM","freedom",0,false,"civ")
-	LICENSEMACRO(blueforce1,"STR_License_BLUEFORCE1","blueforce1",0,false,"civ")
-	LICENSEMACRO(jtf,"STR_License_JTF","jtf",0,false,"civ")
-	LICENSEMACRO(division,"STR_License_5THDIVISION","division",0,false,"civ")
-	LICENSEMACRO(pdu,"STR_License_PDU","pdu",0,false,"civ")
+	LICENSEMACRO(pmc,"STR_License_Pmc","pmc",0,false,"civ")
 };
 
 class VirtualShops {
@@ -377,8 +337,8 @@ class VirtualShops {
 		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig", "weddingring", "paintBlack", "paintWhite", "paintBlue", "paintRed", "paintGreen", "paintOrange", "paintYellow", "paintPurple", "paintPink" };
 	};
 
-	class rebel {
-		name = "STR_Shops_Rebel";
+	class ins {
+		name = "STR_Shops_Ins";
 		items[] = { "waterBottle", "ziptie","blindfold", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
 	};
 

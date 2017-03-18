@@ -6,12 +6,12 @@ hint parseText ( _text);
 
 _onScreenTime = 3;
 sleep 2; 
-_role1 = "Welcome to";
-_role1names = ["Takistan Life Xtreme"];       
-_role2 = "Make sure you're on teamspeak!";
-_role2names = ["ts.tlx-gaming.net"];
-_role3 = "Rules";
-_role3names = ["Ensure you read all of the rules on our website: tlx-gaming.enjin.com"];
+_role1 = "Briefing";
+_role1names = ["The year is 2017. Opfor left southern Takistan, destabilizing the southern area for some time."];       
+_role2 = "Insurgents";
+_role2names = ["The Insurgent's remain. They are more contained and harder to find after the bomb drop of 2016."];
+_role3 = "Radiation";
+_role3names = ["Before the opfor left, they droped a nuclear bomb on the known location of INS."];
 _role4 = "Roleplay!";
 _role4names = ["Ensure you roleplay to the best possible standard!"];
 

@@ -34,5 +34,5 @@ waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done
 
 if((FETCH_CONST(life_coplevel)) > 5) then {
 
-threatLevel = player addaction["Threat Menu", {call life_fnc_ThreatLevelMenu;}];
+//threatLevel = player addaction["Threat Menu", {call life_fnc_ThreatLevelMenu;}];
 };

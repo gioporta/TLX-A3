@@ -29,7 +29,7 @@ switch (_mode) do
 			case "marijuana": {_var = "license_civ_marijuana"}; //Marijuana processing license cost
 			case "medmarijuana": {_var = "license_civ_medmarijuana"}; //Medical Marijuana processing license cost
 			case "gang": {_var = "license_civ_gang"}; //Gang license cost
-			case "rebel": {_var = "license_civ_rebel"}; //Rebel License
+			case "ins": {_var = "license_civ_ins"}; //Ins License
 			case "trucking":{_var = "license_civ_truck"}; //Truck License
 			case "diamond": {_var = "license_civ_diamond"};
 			case "salt": {_var = "license_civ_salt"};
@@ -65,7 +65,7 @@ switch (_mode) do
 			case "license_civ_marijuana": {_var = "marijuana"}; //Marijuana processing license cost
 			case "license_civ_medmarijuana": {_var = "medmarijuana"}; //Medical Marijuana processing license cost
 			case "license_civ_gang": {_var = "gang"}; //Gang license cost
-			case "license_civ_rebel": {_var = "rebel"}; //Rebel License
+			case "license_civ_ins": {_var = "ins"}; //Ins License
 			case "license_civ_truck":{_var = "truck"}; //Truck License
 			case "license_civ_diamond": {_var = "diamond"};
 			case "license_civ_salt": {_var = "salt"};

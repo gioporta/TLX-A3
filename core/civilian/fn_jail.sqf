@@ -49,7 +49,7 @@ removeUniform player;
 removeVest player;
 removeGoggles player;
 //Add the prisoner uniform
-player addUniform "A3L_Prisoner_Outfit";
+player addUniform "U_B_CombatUniform_mcam";
 //Remove all mags
 {player removeMagazine _x} foreach (magazines player);
 
