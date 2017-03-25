@@ -25,7 +25,7 @@ switch (_side) do
 	case civilian:
 	{
 		_return = [
-			["civ_spawn_1","Rasman","\a3\ui_f\data\map\MapControl\bunker_ca.paa"],
+			//["civ_spawn_1","Rasman","\a3\ui_f\data\map\MapControl\bunker_ca.paa"],
 			["civ_spawn_2","Nagara","\a3\ui_f\data\map\MapControl\bunker_ca.paa"]
 		];
 		
