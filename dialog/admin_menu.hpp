@@ -164,7 +164,7 @@ class life_admin_menu {
 		};
 	  	class Purge : Life_RscButtonMenu {
 			idc = 9296;
-			text = "TERROR";
+			text = "Dust";
 			onButtonClick = "[] execVM 'core\functions\fn_terrorAttack.sqf'";
 			colorBackground[] = { 0.584, 0.086, 0.086, 1.0 };
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));

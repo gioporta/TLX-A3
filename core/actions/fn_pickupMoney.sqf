@@ -8,7 +8,7 @@
 */
 private "_value";
 if((time - life_action_delay) < 1.5) exitWith {hint "You can't rapidly use action keys!"; _this SVAR ["inUse",false,true];};
-if({player distance _this > 3}) exitWith {_this SVAR ["inUse",false,true];};
+if(player distance _this > 3) exitWith {_this SVAR ["inUse",false,true];};
 
 _value = SEL((_this GVAR "item"),1);
 if(!isNil "_value") exitWith {

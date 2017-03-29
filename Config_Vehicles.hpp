@@ -160,6 +160,12 @@ class CfgVehicles {
 		chopShop = 1000;
 		textures[] = {};
 	};
+	
+	class CUP_C_SUV_CIV {
+		vItemSpace = 300;
+		chopShop = 1000;
+	};
+	
 
 	class B_Quadbike_01_F {
         vItemSpace = 5;

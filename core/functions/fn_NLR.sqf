@@ -15,7 +15,7 @@ NLR = time + 900;
 while{alive player && (NLR - time) >= 0} do
 {
 	if(player distance life_lastKnownPos < 300) then {
-		["You are close to the scene of your death - be sure to not reengage in the same RP situation.", false] spawn domsg;
+		player globalChat "You are close to the scene of your death - be sure to not reengage in the same RP situation.";
 	};
 	uiSleep 30;
 };

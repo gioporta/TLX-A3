@@ -70,7 +70,7 @@ if ((playerSide == blufor) && {(EQUAL(LIFE_SETTINGS(getNumber,"revive_cops"),1))
 
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == civilian) then {
-		[_curTarget] call life_fnc_InteractionMenu;
+		[_curTarget] call life_fnc_civInteractionMenu;
 	};
 };
 

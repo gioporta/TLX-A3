@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=24348;
+		nextID=24349;
 	};
 	class MarkerIDProvider
 	{
-		nextID=617;
+		nextID=618;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12663.601,256.86264,12544.712};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={4633.5278,20.267244,12665.221};
+		dir[]={-0.78636801,-0.47486806,-0.39517698};
+		up[]={-0.42430794,0.88005644,-0.21323015};
+		aside[]={-0.44903421,-3.0570664e-007,0.89353526};
 	};
 };
 binarizationWanted=0;
@@ -140,7 +140,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=43;
+		items=42;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -358,46 +358,41 @@ class AddonsMetaData
 		};
 		class Item35
 		{
-			className="life_server";
-			name="life_server";
-		};
-		class Item36
-		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item36
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
+		class Item37
 		{
 			className="CUP_Creatures_Military_TakiInsurgents";
 			name="CUP_Creatures_Military_TakiInsurgents";
 		};
-		class Item39
+		class Item38
 		{
 			className="CUP_Editor_Signs_Config";
 			name="CUP_Editor_Signs_Config";
 		};
-		class Item40
+		class Item39
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item41
+		class Item40
 		{
 			className="CUP_Creatures_Military_USArmy";
 			name="CUP_Creatures_Military_USArmy";
 		};
-		class Item42
+		class Item41
 		{
 			className="CUP_StandaloneTerrains_Core_Faction";
 			name="CUP_StandaloneTerrains_Core_Faction";
@@ -487,7 +482,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=8626;
+		items=8627;
 		class Item0
 		{
 			dataType="Marker";
@@ -910,7 +905,7 @@ class Mission
 			text="DP 17";
 			type="mil_box";
 			colorName="ColorYellow";
-			angle=219.81375;
+			angle=219.81374;
 			id=11818;
 		};
 		class Item43
@@ -1618,7 +1613,7 @@ class Mission
 			text="Takistan National Bank";
 			type="loc_Tourism";
 			colorName="ColorWEST";
-			angle=3.4230852;
+			angle=3.423085;
 			id=11888;
 		};
 		class Item113
@@ -1668,7 +1663,7 @@ class Mission
 			name="atm_marker_2_3_1";
 			type="mil_box";
 			colorName="ColorGreen";
-			angle=114.12989;
+			angle=114.12988;
 			id=11893;
 		};
 		class Item118
@@ -1823,7 +1818,7 @@ class Mission
 			position[]={3163.8635,60.324162,9965.8984};
 			name="car_g_1_1";
 			type="Empty";
-			angle=226.49619;
+			angle=226.49617;
 			id=11908;
 		};
 		class Item133
@@ -167475,7 +167470,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4578.5269,9.702713,12740.229};
+						position[]={4578.5269,9.7027216,12740.229};
 						angles[]={0,1.2543682,0};
 					};
 					side="West";
@@ -167483,14 +167478,32 @@ class Mission
 					class Attributes
 					{
 						init="removeallweapons this;this allowDamage false; this enableSimulation false; this addAction[""<t color='#adff2f'>Police Item Store</t>"",life_fnc_virt_menu,""cop""];  this addAction[""<t color='#e92fff'>Police Clothing Store</t>"",life_fnc_clothingMenu,""blufor""];   this addAction[""<t color='#cdeeff'>Police Equipment Store</t>"",life_fnc_weaponShopMenu,""taki_acc""];   this addAction[""<t color='#ff812f'>Recruit Store</t>"",life_fnc_weaponShopMenu,""taki_recruit""];    this addAction[""<t color='#ffe92f'>Private Store</t>"",life_fnc_weaponShopMenu,""taki_private""];    this addAction[""<t color='#e92fff'>Private First Class Store</t>"",life_fnc_weaponShopMenu,""taki_pfc""];    this addAction[""<t color='#f40000'>Corporal Store</t>"",life_fnc_weaponShopMenu,""taki_corporal""];    this addAction[""<t color='#ff2f45'>Sergeant Store</t>"",life_fnc_weaponShopMenu,""taki_sergeant""]; this addAction[""<t color='#00FF66'>Staff Sergeant Store</t>"",life_fnc_weaponShopMenu,""taki_ssergeant""];    this addAction[""<t color='#ff2fad'>Command Store</t>"",life_fnc_weaponShopMenu,""taki_command""];    this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
-						isPlayer=1;
 					};
 					id=24323;
 					type="CUP_B_US_Officer";
-					atlOffset=0.039731026;
+					atlOffset=0.039739609;
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -167509,7 +167522,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -167517,7 +167530,7 @@ class Mission
 			{
 			};
 			id=24322;
-			atlOffset=0.039731026;
+			atlOffset=0.039739609;
 		};
 		class Item8613
 		{
@@ -167724,6 +167737,16 @@ class Mission
 			type="Faction_CUP_TKG";
 			id=24347;
 			atlOffset=3.3579643e+015;
+		};
+		class Item8626
+		{
+			dataType="Marker";
+			position[]={4620.4409,1.1068349e+023,12648.251};
+			name="marker_617";
+			text="US Vehicle Storage";
+			type="mil_triangle";
+			id=24348;
+			atlOffset=1.1068349e+023;
 		};
 	};
 };

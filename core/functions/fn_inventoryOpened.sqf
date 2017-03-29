@@ -34,8 +34,8 @@ if(_container isKindOf "LandVehicle" OR _container isKindOf "Ship" OR _container
 //Allow alive players who've been knocked out to be looted, just not the dead ones
 //TODO drop loot from dead ones
 if(_container isKindOf "Man" && !alive _container) then {
-	hint localize "STR_NOTF_NoLootingPerson";
-	_return = true;
+	//hint localize "STR_NOTF_NoLootingPerson";
+	//_return = true;
 };
 
 if(_container isKindOf "Car" || _container isKindOf "Ship" || _container isKindOf "Air") then {

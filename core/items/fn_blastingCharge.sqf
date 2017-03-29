@@ -10,7 +10,7 @@ _vault = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _vault) exitWith {}; //Bad object
 if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint localize "STR_ISTR_Blast_VaultOnly"};
 if(_vault getVariable["chargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
-if({side _x == west} count playableUnits < 5) exitWith {hint localize "STR_Civ_NotEnoughCops"};
+if({side _x == west} count playableUnits < 1) exitWith {hint localize "STR_Civ_NotEnoughCops"};
 if(_vault getVariable["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 

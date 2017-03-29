@@ -18,5 +18,5 @@ StartProgress = true;
 [] spawn life_fnc_fuelUsage;
 
 if(!isDedicated) exitWith{};
-Tower2 setVariable ["eg_terror", false, true];
+Checkpoint1 setVariable ["eg_terror", false, true];
 Checkpoint1 setVariable ["checkpoint_alarm", false, true];
