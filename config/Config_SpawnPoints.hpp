@@ -239,57 +239,63 @@ class CfgSpawnPoints {
         };
 
     };
-	
-	class Takistan {
-		
-		class Civilian {
-			class Nagara {
+    
+    class Takistan {
+        
+        class Civilian {
+            
+            class Nagara {
                 displayName = "Nagara";
                 spawnMarker = "civ_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
-		};
-		
-		class Cop {
-			class HQ {
+            
+        };
+        
+        class Cop {
+            
+            class HQ {
                 displayName = "NATO Headquarters";
                 spawnMarker = "cop_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
-			
-			class CPAlpha {
+            
+            class CPAlpha {
                 displayName = "Checkpoint Alpha";
                 spawnMarker = "cop_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
-		};
-		
-		class Medic {
-			class RasmanHospital {
+            
+        };
+        
+        class Medic {
+            
+            class RasmanHospital {
                 displayName = "Rasman Hospital";
                 spawnMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
-			
-			class GarmsarClinic {
+            
+            class GarmsarClinic {
                 displayName = "Garmsar Clinic";
                 spawnMarker = "medic_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
-			
-			class FeruzAbadClinic {
+            
+            class FeruzAbadClinic {
                 displayName = "Feruz Abad Clinic";
                 spawnMarker = "medic_spawn_3";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_ca.paa";
                 conditions = "";
             };
-		};
-		
-	};
+            
+        };
+        
+    };
 
 };
