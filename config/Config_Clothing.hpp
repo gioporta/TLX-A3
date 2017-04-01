@@ -27,9 +27,12 @@ class Clothing {
             { "U_IG_Guerilla2_3", "", 1200, "" },
             { "U_C_HunterBody_grn", "", 1500, "" },
             { "U_NikosAgedBody", $STR_C_Civ_Niko, 2500, "" },
-            { "CUP_O_TKI_Khet_Partug_01", "", 100, "" }, //Apex DLC
-            { "CUP_O_TKI_Khet_Partug_02", "", 100, "" }, //Apex DLC
-            { "CUP_O_TKI_Khet_Partug_03", "", 100, "" }, //Apex DLC
+            { "U_C_Man_casual_1_F", "", 5000, "" }, //Apex DLC
+            { "U_C_Man_casual_2_F", "", 5000, "" }, //Apex DLC
+            { "U_C_Man_casual_3_F", "", 5000, "" }, //Apex DLC
+            { "CUP_O_TKI_Khet_Partug_01", "", 100, "" },
+            { "CUP_O_TKI_Khet_Partug_02", "", 100, "" },
+            { "CUP_O_TKI_Khet_Partug_03", "", 100, "" },
             { "CUP_O_TKI_Khet_Partug_04", "", 100, "" },
             { "CUP_O_TKI_Khet_Partug_05", "", 100, "" },
             { "CUP_O_TKI_Khet_Partug_06", "", 100, "" },
