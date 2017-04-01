@@ -68,7 +68,8 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
     _pos = getPosATL player;
 } else {
     if (LIFE_SETTINGS(getNumber,"clothing_box") isEqualTo 1) then {
-        _pos = [1000,1000,10000];
+        //_pos = [1000,1000,10000]; // for Altis/Tanoa
+        _pos = [4500,12050,10000]; // for Takistan
     } else {
         _pos = switch _shop do {
             case "reb": {[13590,12214.6,0.00141621]};
