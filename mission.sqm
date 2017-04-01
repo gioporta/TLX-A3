@@ -408,6 +408,23 @@ class ScenarioData
 		gameType="RPG";
 		maxPlayers=80;
 	};
+	saving=0;
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=5;
+	class Header
+	{
+		gameType="RPG";
+		minPlayers=1;
+		maxPlayers=75;
+	};
+	wreckLimit=3;
+	wreckRemovalMinTime=60;
+	wreckRemovalMaxTime=320;
+	corpseLimit=75;
+	corpseRemovalMinTime=600;
+	corpseRemovalMaxTime=900;
 };
 class CustomAttributes
 {
