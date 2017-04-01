@@ -15,8 +15,8 @@
 *
 */
 class Clothing {
-    class bruce {
-        title = "STR_Shops_C_Bruce";
+    class civilian {
+        title = "STR_Shops_C_Civilian";
         conditions = "";
         side = "civ";
         uniforms[] = {

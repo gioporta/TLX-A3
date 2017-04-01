@@ -47,16 +47,16 @@
         </Key>
     </Package>
     <Package name="Shop_Names">
-        <Key ID="STR_Shops_C_Bruce">
-            <Original>Bruce's Outback Outfits</Original>
-            <Czech>Bruceovy Outback Oblečení</Czech>
-            <French>Friperie de Bruce</French>
-            <Spanish>Tienda de Ropa</Spanish>
+        <Key ID="STR_Shops_C_Civilian">
+            <Original>Civilian Clothing</Original>
+            <Czech></Czech>
+            <French></French>
+            <Spanish></Spanish>
             <Russian></Russian>
-            <Portuguese>Loja de Roupas</Portuguese>
-            <Polish>Sklep odzieżowy</Polish>
-            <Italian>Emporio di Bruce</Italian>
-            <German>Bruce's Outback Outfits</German>
+            <Portuguese></Portuguese>
+            <Polish></Polish>
+            <Italian></Italian>
+            <German></German>
         </Key>
         <Key ID="STR_Shops_C_Police">
             <Original>Altis Police Department Shop</Original>
