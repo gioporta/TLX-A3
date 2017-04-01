@@ -132,7 +132,7 @@ class Clothing {
             { "G_Lady_Blue", "", 150, "" }
         };
         vests[] = {
-            { "NONE", $STR_C_Remove_vests, 0, "" }
+            { "NONE", $STR_C_Remove_vests, 0, "" },
             { "CUP_V_OI_TKI_Jacket1_01", "", 100, "" },
 			{ "CUP_V_OI_TKI_Jacket1_02", "", 100, "" },
 			{ "CUP_V_OI_TKI_Jacket1_03", "", 100, "" },
