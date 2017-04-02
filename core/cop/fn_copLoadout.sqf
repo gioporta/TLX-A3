@@ -11,22 +11,22 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
-player addUniform "U_Rangemaster";
-player addVest "V_Rangemaster_belt";
+player addUniform "CUP_U_B_USArmy_Base";
 
-player addMagazine "16Rnd_9x21_Mag";
-player addWeapon "hgun_P07_snds_F";
-player addMagazine "16Rnd_9x21_Mag";
-player addMagazine "16Rnd_9x21_Mag";
-player addMagazine "16Rnd_9x21_Mag";
-player addMagazine "16Rnd_9x21_Mag";
-player addMagazine "16Rnd_9x21_Mag";
+// TODO Taser
+//player addWeapon "Taser_26";
+//player addMagazine "26_cartridge";
+//player addMagazine "26_cartridge";
+//player addMagazine "26_cartridge";
 
 /* ITEMS */
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "ItemGPS";
+
+// TODO panicbutton
+// [true,"panicbutton",1] call life_fnc_handleInv;
 
 [] call life_fnc_playerSkins;
 [] call life_fnc_saveGear;
