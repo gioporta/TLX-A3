@@ -54,6 +54,9 @@ if (life_spawn_point isEqualTo []) then {
     titleText[format ["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 };
 
+// Call Takistan survival script (nuclear zone, carrying uranium, and misc radio functions)
+[] execVM "core\init_survival.sqf";
+
 if (life_firstSpawn) then {
     life_firstSpawn = false;
     [] call life_fnc_welcomeNotification;
