@@ -20,6 +20,7 @@ _illegalItems = LIFE_SETTINGS(getArray,"jail_seize_vItems");
 player setVariable ["restrained",false,true];
 player setVariable ["Escorting",false,true];
 player setVariable ["transporting",false,true];
+player setVariable ["tf_unable_to_use_radio", true]; // take away ability to use radio
 
 titleText[localize "STR_Jail_Warn","PLAIN"];
 hint localize "STR_Jail_LicenseNOTF";

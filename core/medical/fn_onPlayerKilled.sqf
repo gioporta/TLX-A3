@@ -138,6 +138,7 @@ life_is_alive = false;
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 
+player setVariable ["tf_unable_to_use_radio", true];
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
 if (playerSide isEqualTo civilian) then {

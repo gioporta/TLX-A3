@@ -6,6 +6,11 @@
     Description:
     Cop Initialization file.
 */
+
+// TFAR Variables
+tf_no_auto_long_range_radio = true; 
+tf_terrain_interception_coefficient = 3;
+
 player addRating 9999999;
 waitUntil {!(isNull (findDisplay 46))};
 

@@ -17,6 +17,8 @@ life_corpse setVariable ["realname",nil,true]; //Should correct the double name 
 _dir = getDir life_corpse;
 hint format [localize "STR_Medic_RevivePay",_medic,[_reviveCost] call life_fnc_numberText];
 
+player setVariable ["tf_unable_to_use_radio", false];
+
 closeDialog 0;
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
@@ -35,6 +37,8 @@ life_corpse setVariable ["Revive",nil,true];
 life_corpse setVariable ["name",nil,true];
 [life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
 deleteVehicle life_corpse;
+
+player setVariable ["tf_unable_to_use_radio", false]; // another one??
 
 life_action_inUse = false;
 life_is_alive = true;

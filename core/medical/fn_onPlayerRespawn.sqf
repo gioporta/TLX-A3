@@ -21,6 +21,7 @@ _unit setVariable ["realname",profileName,true]; //Reset the players name.
 
 _unit addRating 1e12; //Set our rating to a high value, this is for a ARMA engine thing.
 player playMoveNow "AmovPpneMstpSrasWrflDnon";
+player setVariable ["tf_unable_to_use_radio", false];
 
 [] call life_fnc_setupActions;
 [_unit,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];

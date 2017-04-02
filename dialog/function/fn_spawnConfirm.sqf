@@ -63,3 +63,5 @@ if (life_firstSpawn) then {
 };
 [] call life_fnc_playerSkins;
 [] call life_fnc_hudSetup;
+
+if (backpack player == "tf_anprc155") then {removeBackpack player}; // umm, I thought we already disabled this?

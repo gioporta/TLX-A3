@@ -71,6 +71,7 @@ switch (true) do {
         };
 
         [5] call SOCK_fnc_updatePartial;
+        player setVariable ["tf_unable_to_use_radio", false]; // give back ability to use radio
     };
 
     case (_esc): {
@@ -85,6 +86,7 @@ switch (true) do {
         };
 
         [5] call SOCK_fnc_updatePartial;
+        player setVariable ["tf_unable_to_use_radio", false]; // give back ability to use radio
     };
 
     case (alive player && !_esc && !_bail): {
@@ -99,6 +101,7 @@ switch (true) do {
 
         player setPos (getMarkerPos "jail_release");
         [5] call SOCK_fnc_updatePartial;
+        player setVariable ["tf_unable_to_use_radio", false]; // give back ability to use radio
     };
 };
 

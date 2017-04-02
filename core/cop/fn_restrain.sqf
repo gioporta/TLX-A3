@@ -24,6 +24,7 @@ if (isNull _cop) exitWith {};
             player setVariable ["restrained",false,true];
             player setVariable ["Escorting",false,true];
             player setVariable ["transporting",false,true];
+            player setVariable ["tf_unable_to_use_radio", false];
             detach player;
             titleText[localize "STR_Cop_ExcessiveRestrain","PLAIN"];
         };
@@ -32,6 +33,7 @@ if (isNull _cop) exitWith {};
 
 titleText[format [localize "STR_Cop_Restrained",_cop getVariable ["realname",name _cop]],"PLAIN"];
 
+player setVariable ["tf_unable_to_use_radio", true];
 life_disable_getIn = true;
 life_disable_getOut = false;
 
@@ -47,11 +49,13 @@ while {player getVariable  "restrained"} do {
         player setVariable ["restrained",false,true];
         player setVariable ["Escorting",false,true];
         player setVariable ["transporting",false,true];
+        player setVariable ["tf_unable_to_use_radio", false];
         detach _player;
     };
 
     if (!alive _cop) then {
         player setVariable ["Escorting",false,true];
+        player setVariable ["tf_unable_to_use_radio", false];
         detach player;
     };
 
@@ -90,5 +94,6 @@ if (alive player) then {
     player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
     player setVariable ["Escorting",false,true];
     player setVariable ["transporting",false,true];
+    player setVariable ["tf_unable_to_use_radio", false];
     detach player;
 };

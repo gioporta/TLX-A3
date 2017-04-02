@@ -6,6 +6,11 @@
     Description:
     Initializes the civilian.
 */
+
+// TFAR Variables
+tf_no_auto_long_range_radio = true; 
+tf_terrain_interception_coefficient = 3;
+
 private _altisArray = ["Land_i_Shop_01_V1_F","Land_i_Shop_01_V2_F","Land_i_Shop_01_V3_F","Land_i_Shop_02_V1_F","Land_i_Shop_02_V2_F","Land_i_Shop_02_V3_F"];
 private _tanoaArray = ["Land_House_Small_01_F"];
 private _takistanArray = ["Land_House_C_10_EP1","Land_House_C_9_EP1","Land_House_C_3_EP1","Land_House_C_11_EP1"];

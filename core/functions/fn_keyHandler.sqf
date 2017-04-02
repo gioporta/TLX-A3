@@ -86,6 +86,21 @@ switch (_code) do {
             _handled = true;
         };
     };
+    
+    //Capslock check - wtf is this even here for?
+    case 58:
+	{
+		if((player getVariable ["tied", false])) then {
+			_handled = true;
+		};	
+		if (!alive player) then {
+			_handled = true;
+			player setVariable ["tf_unable_to_use_radio", true];
+		};		
+		if((player getVariable ["restrained", false])) then {
+			_handled = true;
+		};
+	};
 
     //Map Key
     case _mapKey: {
