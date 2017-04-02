@@ -63,6 +63,15 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
+    
+    //New additions
+    class passport {
+        variable = "passport";
+        displayName = "STR_License_Passport";
+        price = 3500;
+        illegal = false;
+        side = "civ";
+    };
 
     //Processing Licenses
     class oil {

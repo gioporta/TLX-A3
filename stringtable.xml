@@ -7180,6 +7180,9 @@
             <Portuguese>Licença de Casas</Portuguese>
             <Polish>Zarządca nieruchomości</Polish>
         </Key>
+        <Key ID="STR_License_Passport">
+            <Original>Takistani Passport</Original>
+        </Key>
     </Package>
     <Package name="More_Item_Strings">
         <Key ID="STR_ISTR_Blast_VaultOnly">
