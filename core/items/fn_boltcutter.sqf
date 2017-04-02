@@ -1,99 +1,104 @@
+#include "..\..\script_macros.hpp"
 /*
-	Author: Bryan "Tonic" Boardwine
+    File: fn_boltcutter.sqf
+    Author: Bryan "Tonic" Boardwine
 
-	Description:
-	Breaks the lock on a single door (Closet door to the player).
+    Description:
+    Breaks the lock on a single door (Closet door to the player).
 */
-private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
-_building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _building) exitWith {};
-if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
-//if((west countSide playableUnits) < 2) exitWith {hint "There needs to be 2 or more cops online to try and crack the safe."};
-if((west countSide playableUnits) < 5) exitWith {hint "There needs to be 5 or more cops online to rob the federal reserve."};
-if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
-if((nearestObject [[14089.549,18935.271,0],"Land_Dome_Big_F"]) == _building) then {
-	[[[1,2],"!!SOMEONE IS CUTTING THE DOOR AT THE FEDERAL RESERVE!!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-};
+private ["_building","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
+_building = param [0,objNull,[objNull]];
 
-if((nearestObject [[14083.51,18945.4,0],"Land_Research_house_V1_F"]) == _building) then {
-	[[[1,2],"!!THE VAULT IS BEING BROKEN INTO AT THE FEDERAL RESERVE!!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-};
-if((nearestObject [[14083.51,18945.4,0],"Land_MilOffices_V1_F"]) == _building) then {
-	[[[1,2],"!!SOMEONE IS BREAKING INTO THE JAIL!!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-};
+private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
+private _altisArray = [16019.5,16952.9,0];
+private _tanoaArray = [11074.2,11501.5,0.00137329];
+private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
-_doors = 1;
-while {true} do {
-	if(!isClass(configFile >> "CfgVehicles" >> (typeOf _building) >> "AnimationSources" >> format["Door_%1_source",_doors])) exitWith {};
-	_doors = _doors + 1;
+if (isNull _building) exitWith {};
+if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};
+if (((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) && (west countSide playableUnits < (LIFE_SETTINGS(getNumber,"minimum_cops")))) exitWith {
+    hint format [localize "STR_Civ_NotEnoughCops",(LIFE_SETTINGS(getNumber,"minimum_cops"))];
 };
+if ((typeOf _building) == _vaultHouse && (nearestObject [_pos,"Land_Dome_Big_F"]) getVariable ["locked",true]) exitWith {hint localize "STR_ISTR_Bolt_Exploit"};
+if (isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 
+_doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building),"numberOfDoors");
 _door = 0;
 //Find the nearest door
 for "_i" from 1 to _doors do {
-	_selPos = _building selectionPosition format["Door_%1_trigger",_i];
-	_worldSpace = _building modelToWorld _selPos;
-		if(player distance _worldSpace < 5) exitWith {_door = _i;};
+    _selPos = _building selectionPosition format ["Door_%1_trigger",_i];
+    _worldSpace = _building modelToWorld _selPos;
+        if (player distance _worldSpace < 2) exitWith {_door = _i;};
 };
-if(_door == 0) exitWith {hint "You are not near a door!"}; //Not near a door to be broken into.
-if((_building getVariable[format["bis_disabled_Door_%1",_door],0]) == 0) exitWith {hint "This door is already unlocked!"};
-life_action_inUse = true;
+if (_door isEqualTo 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
+if ((_building getVariable [format ["bis_disabled_Door_%1",_door],0]) isEqualTo 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
 
+if ((nearestObject [_pos,"Land_Dome_Big_F"]) == _building || (nearestObject [_pos,_vaultHouse]) == _building) then {
+    [[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+} else {
+    [0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+};
+
+life_action_inUse = true;
 //Setup the progress bar
 disableSerialization;
-_title = "Cutting lock on door";
-5 cutRsc ["life_progress","PLAIN"];
+_title = localize "STR_ISTR_Bolt_Process";
+"progressBar" cutRsc ["life_progress","PLAIN"];
 _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
 _titleText = _ui displayCtrl 38202;
-_titleText ctrlSetText format["%2 (1%1)...","%",_title];
+_titleText ctrlSetText format ["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 switch (typeOf _building) do {
-	case "Land_Dome_Big_F": {_cpRate = 0.003;};
-	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
-	case "Land_MilOffices_V1_F": {_cpRate = 0.0012;};
-	default {_cpRate = 0.08;}
+    case "Land_Dome_Big_F": {_cpRate = 0.003;};
+    case "Land_Medevac_house_V1_F";
+    case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
+    default {_cpRate = 0.08;}
 };
 
-while {true} do
-{
-	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
-		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-	};
-	sleep 0.26;
-	if(isNull _ui) then {
-		5 cutRsc ["life_progress","PLAIN"];
-		_ui = uiNamespace getVariable "life_progress";
-		_progressBar = _ui displayCtrl 38201;
-		_titleText = _ui displayCtrl 38202;
-	};
-	_cP = _cP + _cpRate;
-	_progressBar progressSetPosition _cP;
-	_titleText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_title];
-	if(_cP >= 1 OR !alive player) exitWith {};
-	if(life_istazed) exitWith {_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];}; //Tazed
-	if(life_interrupted) exitWith {_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
+for "_i" from 0 to 1 step 0 do {
+    if (animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
+        [player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
+        player switchMove "AinvPknlMstpSnonWnonDnon_medic_1";
+        player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
+    };
+    sleep 0.26;
+    if (isNull _ui) then {
+        "progressBar" cutRsc ["life_progress","PLAIN"];
+        _ui = uiNamespace getVariable "life_progress";
+        _progressBar = _ui displayCtrl 38201;
+        _titleText = _ui displayCtrl 38202;
+    };
+    _cP = _cP + _cpRate;
+    _progressBar progressSetPosition _cP;
+    _titleText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_title];
+    if (_cP >= 1 || !alive player) exitWith {};
+    if (life_istazed) exitWith {}; //Tazed
+    if (life_isknocked) exitWith {}; //Knocked
+    if (life_interrupted) exitWith {};
 };
 
 //Kill the UI display and check for various states
-5 cutText ["","PLAIN"];
+"progressBar" cutText ["","PLAIN"];
 player playActionNow "stop";
-if(!alive player OR life_istazed) exitWith {life_action_inUse = false;_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
-if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
-if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cancelled","PLAIN"]; life_action_inUse = false;_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
-_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];
+if (!alive player || life_istazed || life_isknocked) exitWith {life_action_inUse = false;};
+if (player getVariable ["restrained",false]) exitWith {life_action_inUse = false;};
+if (life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 life_boltcutter_uses = life_boltcutter_uses + 1;
 life_action_inUse = false;
-if(life_boltcutter_uses >= 5) then {
-	[false,"boltcutter",1] call life_fnc_handleInv;
-	life_boltcutter_uses = 0;
+
+if (life_boltcutter_uses >= 5) then {
+    [false,"boltcutter",1] call life_fnc_handleInv;
+    life_boltcutter_uses = 0;
 };
 
-_building setVariable[format["bis_disabled_Door_%1",_door],0,true];
-if((_building getVariable["locked",false])) then {
-	_building setVariable["locked",false,true];
+_building setVariable [format ["bis_disabled_Door_%1",_door],0,true]; //Unlock the door.
+_building setVariable ["locked",false,true];
+
+if (life_HC_isActive) then {
+    [getPlayerUID player,profileName,"459"] remoteExecCall ["HC_fnc_wantedAdd",HC_Life];
+} else {
+    [getPlayerUID player,profileName,"459"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 };
-[[getPlayerUID player,player getVariable["realname",name player],"1014"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

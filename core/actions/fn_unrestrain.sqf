@@ -1,13 +1,18 @@
+#include "..\..\script_macros.hpp"
 /*
-	File: fn_unrestrain.sqf
-*/
-private["_unit"];
-_unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _unit OR !(_unit getVariable["restrained",FALSE])) exitWith {}; //Error check?
+    File: fn_unrestrain.sqf
+    Author:
 
-_unit setVariable["restrained",FALSE,TRUE];
-_unit setVariable["Escorting",FALSE,TRUE];
-_unit setVariable["transporting",FALSE,TRUE];
+    Description:
+
+*/
+private ["_unit"];
+_unit = param [0,objNull,[objNull]];
+if (isNull _unit || !(_unit getVariable ["restrained",false])) exitWith {}; //Error check?
+
+_unit setVariable ["restrained",false,true];
+_unit setVariable ["Escorting",false,true];
+_unit setVariable ["transporting",false,true];
 detach _unit;
 
-[[0,"STR_NOTF_Unrestrain",true,[_unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;
+[0,"STR_NOTF_Unrestrain",true,[_unit getVariable ["realname",name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",west];
