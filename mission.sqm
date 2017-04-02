@@ -142647,7 +142647,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false;this allowDamage false; this addAction[""NATO Armory"",life_fnc_weaponShopMenu,""nato_armory""];";   this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+				init="this enableSimulation false;this allowDamage false; this addAction[""NATO Armory"",life_fnc_weaponShopMenu,""nato_armory""];   this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 			};
 			id=21791;
 			type="Land_InfoStand_V1_F";
