@@ -5,7 +5,11 @@
     Description:
     
 */
+// TFAR variables
 tf_no_auto_long_range_radio = true;
+tf_give_personal_radio_to_regular_soldier = true;
+tf_defaultWestPersonalRadio = tf_anprc152;
+tf_defaultGuerPersonalRadio = tf_anprc152;
 //BLUFOR radios can only talk with themselves, OPFOR/INDEP radios can talk amongst each other.
 //There is no such thing as a CIV radio, but I'll leave the variable here... 
 tf_west_radio_code = "nato";
