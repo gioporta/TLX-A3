@@ -208,7 +208,7 @@ class WeaponShops {
             { "optic_Hamr", "", 500, 250, "" },
             { "acc_flashlight", "", 500, 250, "" },
             { "CUP_optic_CompM4", "", 500, 250, "call life_coplevel >= 6" },
-            { "optic_LRPS", "", 500, 250, "call life_coplevel >= 6" },
+            { "optic_LRPS", "", 500, 250, "call life_coplevel >= 6" }
             };
     };
 
