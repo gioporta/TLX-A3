@@ -22,7 +22,7 @@
 class WeaponShops {
     //Armory Shops
     class gun {
-        name = "Billy Joe's Firearms";
+        name = "Firearms Store";
         side = "civ";
         conditions = "license_civ_gun";
         items[] = {
@@ -51,6 +51,7 @@ class WeaponShops {
         side = "civ";
         conditions = "license_civ_rebel";
         items[] = {
+            { "tf_fadak", "Fadak Radio (5km)", 1500, 750, "" },
             { "arifle_TRG20_F", "", 25000, 12500, "" },
             { "arifle_Katiba_F", "", 30000, 15000, "" },
             { "srifle_DMR_01_F", "", 50000, 25000, "" },
@@ -84,6 +85,7 @@ class WeaponShops {
         side = "civ";
         conditions = "";
         items[] = {
+            { "tf_fadak", "Fadak Radio (5km)", 1500, 750, "" },
             { "hgun_Rook40_F", "", 1500, 750, "" },
             { "hgun_Pistol_heavy_02_F", "", 2500, 1250, "" },
             { "hgun_ACPC2_F", "", 4500, 2250, "" },
@@ -113,6 +115,7 @@ class WeaponShops {
             { "ItemWatch", "", 50, 25, "" },
             { "FirstAidKit", "", 150, 75, "" },
             { "NVGoggles", "", 2000, 1000, "" },
+            { "tf_fadak", "Fadak Radio (5km)", 1500, 750, "" },
             { "Chemlight_red", "", 300, 150, "" },
             { "Chemlight_yellow", "", 300, 150, "" },
             { "Chemlight_green", "", 300, 150, "" },
@@ -215,10 +218,14 @@ class WeaponShops {
         side = "med";
         conditions = "";
         items[] = {
+            { "ItemMap", "Map", 10, 5, ""},
             { "ItemGPS", "", 100, 50, "" },
+            { "tf_anprc152", "", 50, 25, "" },
             { "Binocular", "", 150, 75, "" },
+            { "NVGoggles", "", 1200, 600, "" },
+            { "ToolKit", "", 1500, 750, "" },
             { "FirstAidKit", "", 150, 75, "" },
-            { "NVGoggles", "", 1200, 600, "" }
+            { "Medikit", "", 500, 250, "" }
         };
         mags[] = {};
         accs[] = {};
