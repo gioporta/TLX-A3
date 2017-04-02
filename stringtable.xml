@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="Altis Life RPG">
+<Project name="Takistan Life RPG">
     <Package name="Init">
         <Key ID="STR_Init_ClientSetup">
             <Original>Setting up client, please wait...</Original>
@@ -48,7 +48,7 @@
     </Package>
     <Package name="Shop_Names">
         <Key ID="STR_Shops_C_Civilian">
-            <Original>Civilian Clothing</Original>
+            <Original>Civilian Clothing Shop</Original>
             <Czech></Czech>
             <French></French>
             <Spanish></Spanish>
@@ -59,15 +59,15 @@
             <German></German>
         </Key>
         <Key ID="STR_Shops_C_Police">
-            <Original>Altis Police Department Shop</Original>
-            <Czech>Altis policejní oddělení Shop</Czech>
+            <Original>NATO Peacekeeper Shop</Original>
+            <Czech>Takistan policejní oddělení Shop</Czech>
             <French>Boutique de la police</French>
             <Spanish>Tienda del Departamento de Policía</Spanish>
             <Russian></Russian>
             <Portuguese>Loja de Roupas Policiais</Portuguese>
             <Polish>Sklep Policyjny</Polish>
-            <Italian>Dipartimento della Polizia di Altis</Italian>
-            <German>Altis Polizei Department Geschäft</German>
+            <Italian>Dipartimento della Polizia di Takistan</Italian>
+            <German>Takistan Polizei Department Geschäft</German>
         </Key>
         <Key ID="STR_Shops_C_Rebel">
             <Original>Mohammed's Jihadi Shop</Original>
@@ -125,15 +125,15 @@
             <Polish>Sklep Kartingowy</Polish>
         </Key>
         <Key ID="STR_Shops_Market">
-            <Original>Altis Market</Original>
-            <Czech>Altis Market</Czech>
-            <Spanish>Mercado de Altis</Spanish>
+            <Original>Takistani Market</Original>
+            <Czech>Market</Czech>
+            <Spanish>Mercado</Spanish>
             <Russian></Russian>
-            <German>Altis Markt</German>
+            <German>Takistan Markt</German>
             <Italian>Mercato</Italian>
-            <French>Marché d'Altis</French>
+            <French>Marché de Takistan</French>
             <Portuguese>Mercado</Portuguese>
-            <Polish>Market Altis</Polish>
+            <Polish>Market Takistan</Polish>
         </Key>
         <Key ID="STR_Shops_Rebel">
             <Original>Rebel Market</Original>
@@ -235,11 +235,11 @@
             <Polish>Skup Szkła</Polish>
         </Key>
         <Key ID="STR_Shops_Minerals">
-            <Original>Altis Industrial Trader</Original>
-            <Czech>Altis Industrial Trader</Czech>
+            <Original>Takistan Industrial Trader</Original>
+            <Czech>Takistan Industrial Trader</Czech>
             <Spanish>Comerciante Industrial</Spanish>
             <Russian></Russian>
-            <German>Altis Industriehandel</German>
+            <German>Takistan Industriehandel</German>
             <Italian>Vendita materiali industriali</Italian>
             <French>Acheteur Industriel</French>
             <Portuguese>Comprador de Material Indústrial</Portuguese>
@@ -922,7 +922,7 @@
             <French>Gestion du Compte Bancaire</French>
             <Italian>Gestione Bancaria</Italian>
             <Portuguese>Conta Bancária</Portuguese>
-            <Polish>Bankomat Altis</Polish>
+            <Polish>Bankomat Takistan</Polish>
         </Key>
         <Key ID="STR_ATM_Withdraw">
             <Original>Withdraw</Original>
@@ -1191,13 +1191,13 @@
     </Package>
     <Package name="Cell_Phone">
         <Key ID="STR_CELL_Title">
-            <Original>Altis Mobile</Original>
-            <Czech>Altis Mobile</Czech>
+            <Original>Takistan Mobile</Original>
+            <Czech>Takistan Mobile</Czech>
             <Spanish>Celular</Spanish>
             <Russian></Russian>
-            <German>Altis Mobilfunk</German>
-            <French>Altis Mobile</French>
-            <Italian>Cellulare Altis</Italian>
+            <German>Takistan Mobilfunk</German>
+            <French>Takistan Mobile</French>
+            <Italian>Cellulare Takistan</Italian>
             <Portuguese>Celular</Portuguese>
             <Polish>Telefon</Polish>
         </Key>
@@ -9505,6 +9505,17 @@
             <Polish>Warzelnia soli</Polish>
             <Italian>Processo del sale</Italian>
         </Key>
+        <Key ID="STR_MAR_Takistan_Corrections">
+            <Original>Takistan Corrections</Original>
+            <Czech>Takistan Opravy</Czech>
+            <French>Prison d'Takistan</French>
+            <Spanish>Prisión de Takistan</Spanish>
+            <Russian></Russian>
+            <German>Takistan Bundesgefängnis</German>
+            <Portuguese>Prisão de Takistan</Portuguese>
+            <Polish>Więzienie Takistan</Polish>
+            <Italian>Penitenziario di Takistan</Italian>
+        </Key>
         <Key ID="STR_MAR_Altis_Corrections">
             <Original>Altis Corrections</Original>
             <Czech>Altis Opravy</Czech>
@@ -9536,7 +9547,7 @@
             <Russian></Russian>
             <German>Polizei HQ</German>
             <Portuguese>QG Policial</Portuguese>
-            <Polish>KG Policji Altis</Polish>
+            <Polish>KG Policji Takistan</Polish>
         </Key>
         <Key ID="STR_MAR_Coast_Guard">
             <Original>Coast Guard</Original>
@@ -9668,7 +9679,7 @@
             <Russian></Russian>
             <German>Zentralbank</German>
             <Portuguese>Banco Local</Portuguese>
-            <Polish>Bank Altis</Polish>
+            <Polish>Bank Takistan</Polish>
         </Key>
         <Key ID="STR_MAR_Car_Shop">
             <Original>Car Shop</Original>
@@ -9690,7 +9701,7 @@
             <Russian></Russian>
             <German>Krankenhaus</German>
             <Portuguese>Hospital/Clínica</Portuguese>
-            <Polish>Klinika Altis</Polish>
+            <Polish>Klinika Takistan</Polish>
         </Key>
         <Key ID="STR_MAR_Diamond_Mine">
             <Original>Diamond Mine</Original>
@@ -9796,7 +9807,7 @@
             <Czech>Channel 7 News</Czech>
             <French>Chaine d'infos numero 7</French>
             <Spanish>Canal de Noticias 7</Spanish>
-            <Italian>Notiziario di Altis</Italian>
+            <Italian>Notiziario di Takistan</Italian>
             <Russian></Russian>
             <German>Kanal 7 Nachrichtensender</German>
             <Portuguese>Canal de Notícias 7</Portuguese>
