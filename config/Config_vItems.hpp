@@ -135,6 +135,13 @@ class VirtualShops {
         conditions = "";
         items[] = { "uranium", "uraniumr" };
     };
+    
+    class bar {
+        name = "STR_Shops_Bar";
+        side = "civ";
+        conditions = "";
+        items[] = { "beer", "whiskey", "vodka" };
+    };
 };
 
 /*
@@ -883,6 +890,39 @@ class VirtualItems {
         buyPrice = -1;
         sellPrice = 7400;
         illegal = true;
+        edible = -1;
+        icon = "";
+    };
+    
+    class beer {
+        variable = "beer";
+        displayName = "STR_Item_Beer";
+        weight = 1;
+        buyPrice = 150;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+    
+    class whiskey {
+        variable = "whiskey";
+        displayName = "STR_Item_Whiskey";
+        weight = 1;
+        buyPrice = 220;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "";
+    };
+    
+    class vodka {
+        variable = "vodka";
+        displayName = "STR_Item_Vodka";
+        weight = 1;
+        buyPrice = 300;
+        sellPrice = -1;
+        illegal = false;
         edible = -1;
         icon = "";
     };

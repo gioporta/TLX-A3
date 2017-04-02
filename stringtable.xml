@@ -314,6 +314,9 @@
         <Key ID="STR_Shops_Uranium">
             <Original>Uranium Dealer</Original>
         </Key>
+        <Key ID="STR_Shops_Bar">
+            <Original>Takistan Pub</Original>
+        </Key>
     </Package>
     <Package name="Global">
         <Key ID="STR_Global_Close">
@@ -6966,6 +6969,15 @@
         </Key>
         <Key ID="STR_Item_UraniumR">
             <Original>Refined Uranium</Original>
+        </Key>
+        <Key ID="STR_Item_Beer">
+            <Original>Beer</Original>
+        </Key>
+        <Key ID="STR_Item_Vodka">
+            <Original>Vodka</Original>
+        </Key>
+        <Key ID="STR_Item_Whiskey">
+            <Original>Whiskey</Original>
         </Key>
     </Package>
     <Package name="Life_License">

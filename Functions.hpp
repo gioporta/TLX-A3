@@ -271,6 +271,14 @@ class Life_Client_Core {
         class spikeStrip {};
         class storageBox {};
     };
+    
+    class Alcohol
+	{
+		file = "core\items\alcohol";
+		class beer {};
+		class whiskey {};
+		class vodka {};
+	};
 
     class Medical_System {
         file = "core\medical";
