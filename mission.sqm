@@ -142647,7 +142647,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false;this allowDamage false;this addAction[""<t color='#adff2f'>Police Item Store</t>"",life_fnc_virt_menu,""cop""];  this addAction[""<t color='#e92fff'>Police Clothing Store</t>"",life_fnc_clothingMenu,""blufor""];   this addAction[""<t color='#cdeeff'>Police Equipment Store</t>"",life_fnc_weaponShopMenu,""taki_acc""];   this addAction[""<t color='#ff812f'>Recruit Store</t>"",life_fnc_weaponShopMenu,""taki_recruit""];    this addAction[""<t color='#ffe92f'>Private Store</t>"",life_fnc_weaponShopMenu,""taki_private""];    this addAction[""<t color='#e92fff'>Private First Class Store</t>"",life_fnc_weaponShopMenu,""taki_pfc""];    this addAction[""<t color='#f40000'>Corporal Store</t>"",life_fnc_weaponShopMenu,""taki_corporal""];    this addAction[""<t color='#ff2f45'>Sergeant Store</t>"",life_fnc_weaponShopMenu,""taki_sergeant""]; this addAction[""<t color='#00FF66'>Staff Sergeant Store</t>"",life_fnc_weaponShopMenu,""taki_ssergeant""];    this addAction[""<t color='#ff2fad'>Command Store</t>"",life_fnc_weaponShopMenu,""taki_command""];    this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+				init="this enableSimulation false;this allowDamage false; this addAction[""NATO Armory"",life_fnc_weaponShopMenu,""nato_armory""];";   this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 			};
 			id=21791;
 			type="Land_InfoStand_V1_F";
