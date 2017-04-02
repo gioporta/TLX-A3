@@ -311,6 +311,9 @@
             <Portuguese>Loja de Conveniência</Portuguese>
             <Polish>Caffe OLLEN</Polish>
         </Key>
+        <Key ID="STR_Shops_Uranium">
+            <Original>Uranium Dealer</Original>
+        </Key>
     </Package>
     <Package name="Global">
         <Key ID="STR_Global_Close">
@@ -6958,6 +6961,12 @@
             <Portuguese>Tapete de Espinhos</Portuguese>
             <Polish>Kolczatka drogowa</Polish>
         </Key>
+        <Key ID="STR_Item_Uranium">
+            <Original>Uranium</Original>
+        </Key>
+        <Key ID="STR_Item_UraniumR">
+            <Original>Refined Uranium</Original>
+        </Key>
     </Package>
     <Package name="Life_License">
         <Key ID="STR_License_Driver">
@@ -7791,6 +7800,9 @@
             <Italian>Processando Cemento</Italian>
             <Portuguese>Misturando Cimento</Portuguese>
             <Polish>Mielenie cementu</Polish>
+        </Key>
+        <Key ID="STR_Process_Uranium">
+            <Original>Refining Uranium</Original>
         </Key>
         <Key ID="STR_Process_Stay">
             <Original>You need to stay within 10m to process.</Original>

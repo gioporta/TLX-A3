@@ -63,15 +63,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-    
-    //New additions
-    class passport {
-        variable = "passport";
-        displayName = "STR_License_Passport";
-        price = 3500;
-        illegal = false;
-        side = "civ";
-    };
 
     //Processing Licenses
     class oil {
@@ -195,5 +186,22 @@ class Licenses {
         price = 15000;
         illegal = false;
         side = "med";
+    };
+    
+    //Takistan additions
+    class passport {
+        variable = "passport";
+        displayName = "STR_License_Passport";
+        price = 3500;
+        illegal = false;
+        side = "civ";
+    };
+    
+    class uranium {
+        variable = "uranium";
+        displayName = "STR_License_Uranium";
+        price = 53000;
+        illegal = false;
+        side = "civ";
     };
 };

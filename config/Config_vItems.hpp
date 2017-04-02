@@ -127,6 +127,14 @@ class VirtualShops {
         conditions = "";
         items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
     };
+    
+    //Takistan Additions
+    class uranium {
+        name = "STR_Shops_Uranium";
+        side = "civ";
+        conditions = "";
+        items[] = { "uranium", "uraniumr" };
+    };
 };
 
 /*
@@ -855,4 +863,28 @@ class VirtualItems {
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
     };
+    
+    //Takistan Additions
+    class uranium {
+        variable = "uranium";
+        displayName = "STR_Item_Uranium";
+        weight = 4;
+        buyPrice = -1;
+        sellPrice = -1;
+        illegal = true;
+        edible = -1;
+        icon = "";
+    };
+    
+    class uraniumr {
+        variable = "uraniumr";
+        displayName = "STR_Item_UraniumR";
+        weight = 2;
+        buyPrice = -1;
+        sellPrice = 7400;
+        illegal = true;
+        edible = -1;
+        icon = "";
+    };
+    
 };
